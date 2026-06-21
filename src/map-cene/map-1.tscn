@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bksao0w6rahtw"]
+
+[ext_resource type="PackedScene" uid="uid://bx0irb3lb1vuf" path="res://addons/gdt_terrain/scenes/gdt_terrain_3d.tscn" id="1_motpk"]
+[ext_resource type="Environment" uid="uid://ccbs1vjrvu3ar" path="res://src/config/world-environment/environment.tres" id="2_i5urr"]
+[ext_resource type="PackedScene" uid="uid://c1c5odb8pmfjb" path="res://assets/3D-models/cube_3d.tscn" id="3_i5urr"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_hhon7"]
+
+[node name="map-1" type="Node3D" unique_id=65407629]
+
+[node name="Sun-3D" type="DirectionalLight3D" parent="." unique_id=57226541]
+transform = Transform3D(0.23989707, -0.7789624, 0.5793678, -0.62131566, 0.3353643, 0.708165, -0.7459332, -0.529857, -0.40352863, 0, 0, 0)
+light_temperature = 5700.0
+light_energy = 4.0
+shadow_enabled = true
+directional_shadow_blend_splits = true
+directional_shadow_fade_start = 0.0
+directional_shadow_max_distance = 18.0
+directional_shadow_pancake_size = 139.7
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2092731255]
+transform = Transform3D(1, 0, 0, 0, 0.9727921, 0.23168, 0, -0.23168, 0.9727921, -19.667343, 16.654196, 18.29121)
+
+[node name="Terrain3D" parent="." unique_id=1866879641 instance=ExtResource("1_motpk")]
+terrain_size = 450.0
+snow_enabled = true
+snow_height = 3.5
+rock_slope_threshold = 1.0
+grass_color = Color(0.25674886, 0.35214156, 0.16141984, 1)
+rock_color = Color(0.4636345, 0.41642278, 0.32804564, 1)
+snow_color = Color(0.17740932, 0.23595506, 0, 1)
+bake_preset = 3
+terrain_performance_preset = 0
+terrain_shadow_casting = 0
+collision_quality = 0
+dynamic_collision_enabled = true
+editor_brush_enabled = true
+paint_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=788195898]
+environment = ExtResource("2_i5urr")
+camera_attributes = SubResource("CameraAttributesPractical_hhon7")
+
+[node name="Cube-3D" parent="." unique_id=805351591 instance=ExtResource("3_i5urr")]
+transform = Transform3D(18.279793, 0, 0, 0, 1, 0, 0, 0, 22.623468, -20.570135, 10.009134, 13.508229)

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c1c5odb8pmfjb"]
+
+[ext_resource type="BoxMesh" uid="uid://duys0uxep77ta" path="res://src/config/cube-mashinstance/new_box_mesh.tres" id="1_6kvas"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hhon7"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Cube-3D" type="MeshInstance3D" unique_id=805351591]
+mesh = ExtResource("1_6kvas")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=377715820]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=42840583]
+shape = SubResource("ConcavePolygonShape3D_hhon7")

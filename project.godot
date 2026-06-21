@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="graficos teste"
+run/main_scene="uid://bksao0w6rahtw"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1366
+window/size/viewport_height=768
+window/size/mode=3
+window/size/borderless=true
+
+[filesystem]
+
+import/blender/enabled=false
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+lights_and_shadows/use_physical_light_units=true
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=4
+reflections/sky_reflections/fast_filter_high_quality=true
+camera/depth_of_field/depth_of_field_bokeh_quality=2
+anti_aliasing/quality/msaa_3d=3
+anti_aliasing/quality/smaa_edge_detection_threshold=0.2
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+anti_aliasing/quality/screen_space_aa=2
+anti_aliasing/quality/use_taa=true
+occlusion_culling/use_occlusion_culling=true
