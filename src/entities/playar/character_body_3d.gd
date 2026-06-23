@@ -16,9 +16,9 @@ const TAXA_GANHO := 15.0
 
 #Head-Bob
 var bob_tempo := 0.0
-const BOB_FREQ_WALK := 8.0
-const BOB_FREQ_RUN := 12.0
-const BOB_AMPLITUDE := 0.04
+const BOB_FREQ_WALK := 0
+const BOB_FREQ_RUN := 0
+const BOB_AMPLITUDE := 0
 
 var camera_pos_original : Vector3
 

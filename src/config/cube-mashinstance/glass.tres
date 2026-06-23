@@ -1,0 +1,22 @@
+[gd_resource type="BoxMesh" format=3 uid="uid://dct0v0bi8fjqy"]
+
+[ext_resource type="Texture2D" uid="uid://bephweshsvd16" path="res://assets/3D-textures/textures/stained_pine_diff_4k.jpg" id="1_g4kvm"]
+[ext_resource type="Texture2D" uid="uid://cxyjqrwbt25hl" path="res://assets/3D-textures/textures/stained_pine_disp_4k.png" id="2_rr4bt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rslbg"]
+disable_fog = true
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("1_g4kvm")
+albedo_texture_force_srgb = true
+metallic = 1.0
+metallic_texture = ExtResource("1_g4kvm")
+metallic_texture_channel = 3
+roughness_texture = ExtResource("2_rr4bt")
+normal_enabled = true
+normal_texture = ExtResource("1_g4kvm")
+refraction_enabled = true
+disable_receive_shadows = true
+grow = true
+
+[resource]
+material = SubResource("StandardMaterial3D_rslbg")
