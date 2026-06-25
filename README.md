@@ -12,7 +12,7 @@ explores advanced graphics techniques in Godot, including shaders, lighting, pos
 - Post-processing effects
 - Visual effects (VFX)
 - Materials and rendering
--
+
 ## Development Screenshots
  
 ![img](/assets/github%20imagers/Screenshot1.jpg)
