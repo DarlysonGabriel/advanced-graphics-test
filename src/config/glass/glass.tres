@@ -1,0 +1,19 @@
+[gd_resource type="BoxMesh" format=3 uid="uid://dct0v0bi8fjqy"]
+
+[ext_resource type="Texture2D" uid="uid://cu5exew51orrd" path="res://assets/3D-textures/textures/stone/stone-roughness.jpg" id="1_xe53u"]
+[ext_resource type="Texture2D" uid="uid://crli7oj2yc61e" path="res://assets/3D-textures/textures/stone/stone.png" id="2_sfh4n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rslbg"]
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("1_xe53u")
+metallic = 1.0
+metallic_specular = 1.0
+metallic_texture = ExtResource("2_sfh4n")
+refraction_enabled = true
+refraction_scale = 1.0
+uv1_triplanar_sharpness = 0.33923575
+fov_override = 1.0
+
+[resource]
+material = SubResource("StandardMaterial3D_rslbg")
+size = Vector3(0.4067464, 1.7356491, 1.7453613)

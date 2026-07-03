@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ctrl4bxw475yd"]
+
+[ext_resource type="PackedScene" uid="uid://bwutyivabsivb" path="res://assets/3D-models/room/Room.tscn" id="1_l5bly"]
+[ext_resource type="PackedScene" uid="uid://bk7thxg74vnpu" path="res://src/entities/playar/playar.tscn" id="2_glqqu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_glqqu"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_tryh8"]
+sky_material = SubResource("ProceduralSkyMaterial_glqqu")
+
+[sub_resource type="Environment" id="Environment_irlpc"]
+background_mode = 2
+sky = SubResource("Sky_tryh8")
+tonemap_mode = 1
+ssr_enabled = true
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.520868, 0.5561465, 0.6110244, 1)
+fog_height = -1.4
+fog_height_density = 7.0175
+volumetric_fog_enabled = true
+adjustment_enabled = true
+adjustment_brightness = 0.84
+adjustment_contrast = 0.99
+adjustment_saturation = 1.68
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_scusb"]
+
+[node name="Map" type="Node3D" unique_id=1572454725]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=878243910]
+environment = SubResource("Environment_irlpc")
+camera_attributes = SubResource("CameraAttributesPractical_scusb")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=12457934]
+transform = Transform3D(-0.24501048, -0.60207796, -0.7599159, -0.6522446, -0.4775536, 0.58865905, -0.71731925, 0.6398787, -0.2756964, 0, 0, 0)
+light_energy = 1.9
+shadow_enabled = true
+directional_shadow_max_distance = 1.0
+
+[node name="Room" parent="." unique_id=1475551695 instance=ExtResource("1_l5bly")]
+
+[node name="Playar" parent="." unique_id=1583252551 instance=ExtResource("2_glqqu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5566251, 0.6125375, 1.1142181)

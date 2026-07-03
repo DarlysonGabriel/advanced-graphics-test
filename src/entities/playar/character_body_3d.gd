@@ -15,7 +15,7 @@ const TAXA_GASTO := 25.0
 const TAXA_GANHO := 15.0
 
 #Head-Bob
-var bob_tempo := 0.0
+var bob_tempo := 0
 const BOB_FREQ_WALK := 0
 const BOB_FREQ_RUN := 0
 const BOB_AMPLITUDE := 0
@@ -61,9 +61,12 @@ func _physics_process(delta):
 	#Pulo
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		
+	if Input.is_action_just_pressed("ui_cancel") :
+		get_tree().quit()
 
 	#Movimento
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
 	if direction:
