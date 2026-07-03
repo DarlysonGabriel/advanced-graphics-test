@@ -11,15 +11,12 @@ config_version=5
 [application]
 
 config/name="graficos teste"
-run/main_scene="uid://ctrl4bxw475yd"
+run/main_scene="uid://dxta417mqvtkp"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1366
-window/size/viewport_height=768
-window/size/mode=2
 window/size/borderless=true
 
 [filesystem]

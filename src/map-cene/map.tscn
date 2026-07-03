@@ -18,14 +18,13 @@ ssr_enabled = true
 ssao_enabled = true
 sdfgi_enabled = true
 glow_enabled = true
-fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0.520868, 0.5561465, 0.6110244, 1)
+fog_density = 1.0
 fog_height = -1.4
 fog_height_density = 7.0175
 volumetric_fog_enabled = true
 adjustment_enabled = true
-adjustment_brightness = 0.84
 adjustment_contrast = 0.99
 adjustment_saturation = 1.68
 
