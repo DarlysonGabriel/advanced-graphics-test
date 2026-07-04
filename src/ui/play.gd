@@ -3,6 +3,7 @@ extends Button
 func _ready() -> void:
 	$"../AnimationPlayer".play("Fade-In")
 	await $"../AnimationPlayer".animation_finished
+	$"../AnimationPlayer".play("Move")
 func _on_pressed() -> void:
 	$"../AnimationPlayer".play("Fade-Out")
 	await $"../AnimationPlayer".animation_finished

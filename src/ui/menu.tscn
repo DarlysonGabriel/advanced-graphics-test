@@ -25,6 +25,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_r1qqu"]
 resource_name = "Fade-Out"
+length = 2.0333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -40,17 +41,19 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_7rifs"]
 resource_name = "Move"
+length = 3.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Backgrund/Godot-ico:texture")
+tracks/0/path = NodePath("Backgrund/Godot-ico:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("2_fqjwh"), ExtResource("2_fqjwh")]
+"times": PackedFloat32Array(0, 1, 1.9666667, 2.9666667),
+"transitions": PackedFloat32Array(2, 0.5, 2, 0.5),
+"update": 0,
+"values": [Vector2(-519.7261, -556.416), Vector2(-519.72614, -442.23468), Vector2(-519.72614, -675.2729), Vector2(-519.7261, -556.416)]
 }
 
 [sub_resource type="Animation" id="Animation_511x6"]
@@ -70,14 +73,14 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Backgrund/Godot-ico:texture")
+tracks/1/path = NodePath("Backgrund/Godot-ico:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_fqjwh")]
+"update": 0,
+"values": [Vector2(-519.7261, -556.416)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gofeh"]
@@ -98,51 +101,14 @@ texture = ExtResource("1_m51dm")
 metadata/_edit_lock_ = true
 
 [node name="Godot-ico" type="Sprite2D" parent="Backgrund" unique_id=693049418]
-position = Vector2(541.9896, -733.94415)
-rotation = -0.7387407
-scale = Vector2(1.6879984, 4.2551074)
-skew = 0.66007364
-texture = ExtResource("2_fqjwh")
-
-[node name="Godot-ico7" type="Sprite2D" parent="Backgrund/Godot-ico" unique_id=1041632559]
-position = Vector2(-344.1497, 357.09534)
-rotation = 0.5235988
-texture = ExtResource("2_fqjwh")
-
-[node name="Godot-ico2" type="Sprite2D" parent="Backgrund/Godot-ico" unique_id=1587108792]
-position = Vector2(-93.99709, 281.25537)
-scale = Vector2(1.0000001, 1.0000001)
-texture = ExtResource("2_fqjwh")
-
-[node name="Godot-ico6" type="Sprite2D" parent="Backgrund/Godot-ico" unique_id=210682538]
-position = Vector2(-803.15393, 230.99965)
-rotation = 0.7853982
-texture = ExtResource("2_fqjwh")
-
-[node name="Godot-ico3" type="Sprite2D" parent="Backgrund/Godot-ico" unique_id=409852638]
-position = Vector2(-531.9813, 30.347214)
-rotation = 0.2617994
-scale = Vector2(1.0000001, 1.0000001)
-texture = ExtResource("2_fqjwh")
-
-[node name="Godot-ico4" type="Sprite2D" parent="Backgrund/Godot-ico" unique_id=1721788033]
-position = Vector2(-391.00555, -159.6392)
-rotation = 0.7853982
-texture = ExtResource("2_fqjwh")
-
-[node name="Godot-ico8" type="Sprite2D" parent="Backgrund/Godot-ico" unique_id=1943152606]
-position = Vector2(-932.6376, -31.456135)
-texture = ExtResource("2_fqjwh")
-
-[node name="Godot-ico5" type="Sprite2D" parent="Backgrund/Godot-ico" unique_id=1664514223]
-position = Vector2(-706.5303, -307.3357)
-rotation = 0.5235988
+position = Vector2(-519.7261, -556.416)
+scale = Vector2(1.1056201, 3.5286808)
 texture = ExtResource("2_fqjwh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1149216518]
 libraries/ = SubResource("AnimationLibrary_gofeh")
 
-[node name="Label" type="Label" parent="." unique_id=346371149]
+[node name="Title" type="Label" parent="." unique_id=346371149]
 offset_left = 1.0
 offset_top = -11.0
 offset_right = 1152.0
@@ -150,30 +116,46 @@ offset_bottom = 145.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 96
-text = "Advanced-Graphic-Test"
-horizontal_alignment = 1
+text = "Advanced-Graphic-Test
+in:"
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="." unique_id=400588264]
+[node name="Version" type="Label" parent="." unique_id=400588264]
 offset_left = -9.0
 offset_top = 590.0
 offset_right = 107.0
 offset_bottom = 647.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
+theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 34
-text = "V0.01"
+text = "V0.02"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1003224325]
-offset_left = 448.0
-offset_top = 559.0
-offset_right = 650.0
-offset_bottom = 649.0
+[node name="Play" type="Button" parent="." unique_id=1003224325]
+offset_left = 473.0
+offset_top = 557.0
+offset_right = 675.0
+offset_bottom = 647.0
 theme_override_font_sizes/font_size = 39
 text = "Play"
 script = ExtResource("3_fqjwh")
+
+[node name="Options" type="Button" parent="." unique_id=14709240]
+offset_left = 699.0
+offset_top = 557.0
+offset_right = 901.0
+offset_bottom = 647.0
+theme_override_font_sizes/font_size = 39
+text = "Options"
+
+[node name="Quit" type="Button" parent="." unique_id=1792883791]
+offset_left = 242.0
+offset_top = 557.0
+offset_right = 444.0
+offset_bottom = 647.0
+theme_override_font_sizes/font_size = 39
+text = "Quit"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2143374064]
 offset_right = 1387.0
@@ -182,4 +164,4 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
