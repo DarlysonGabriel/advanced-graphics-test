@@ -16,9 +16,7 @@ explores advanced graphics techniques in Godot, including shaders, lighting, pos
 
 ## Development Screenshots
  
-![img](/assets/github%20imagers/Screenshot1.jpg)
-
-![img](/assets/github%20imagers/Screenshot2.jpg) 
+Coon
 
 ## Technologies
 

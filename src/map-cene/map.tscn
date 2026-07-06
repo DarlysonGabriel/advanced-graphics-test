@@ -2,20 +2,26 @@
 
 [ext_resource type="Environment" uid="uid://blrx7ncvamup2" path="res://src/config/world-environment/new_environment.tres" id="1_irlpc"]
 [ext_resource type="PackedScene" uid="uid://bwutyivabsivb" path="res://assets/3D-models/room/Room.tscn" id="1_l5bly"]
-[ext_resource type="PackedScene" uid="uid://bk7thxg74vnpu" path="res://src/entities/playar/playar.tscn" id="2_glqqu"]
-[ext_resource type="Texture2D" uid="uid://cu5exew51orrd" path="res://assets/3D-textures/textures/stone/stone-roughness.jpg" id="3_tryh8"]
+[ext_resource type="Script" uid="uid://c1bvql11uksqt" path="res://src/config/camera3D/camera_3d.gd" id="4_irlpc"]
+[ext_resource type="Shader" uid="uid://cd2hdm3ukms87" path="res://src/config/water/water.gdshader" id="5_scusb"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_scusb"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hbbnl"]
+render_priority = 0
+shader = ExtResource("5_scusb")
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_s1ctu"]
+material = SubResource("ShaderMaterial_hbbnl")
+subdivide_width = 400
+subdivide_depth = 400
 
 [node name="Map" type="Node3D" unique_id=1572454725]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=805990345]
 transform = Transform3D(-0.17472693, -0.16793928, -0.9701891, -0.42894554, -0.8739447, 0.22853065, -0.8862709, 0.45608878, 0.08066484, 0, 0, 0)
-light_intensity_lux = 87824.87
-light_temperature = 10534.0
 light_energy = 1.6
+light_specular = 3.034
 shadow_enabled = true
 directional_shadow_blend_splits = true
 directional_shadow_max_distance = 393.0
@@ -26,13 +32,14 @@ camera_attributes = SubResource("CameraAttributesPractical_scusb")
 
 [node name="Room" parent="." unique_id=1475551695 instance=ExtResource("1_l5bly")]
 
-[node name="Playar" parent="." unique_id=1583252551 instance=ExtResource("2_glqqu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.146227, 0.5570128, 1.1754467)
-
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1580053204]
-transform = Transform3D(-5.4223364e-09, 0, 0.1927427, 0, 0.06384827, 0, -0.12404859, 0, -8.425051e-09, -7.8148394, 1.9382693, 0.34272373)
-texture = ExtResource("3_tryh8")
-
 [node name="Whater" type="MeshInstance3D" parent="." unique_id=1297748784]
-transform = Transform3D(5.5640635, 0, 0, 0, 1, 0, 0, 0, 1.9386973, 0, -0.11085904, 1.1651971)
+transform = Transform3D(5.210183, 0, 0, 0, 1, 0, 0, 0, 1.9386973, 0.6848638, -0.1510042, 1.1651971)
 mesh = SubResource("PlaneMesh_s1ctu")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=133575015]
+transform = Transform3D(-0.12523405, 0, 0.99212724, 0, 1, 0, -0.99212724, 0, -0.12523405, 6.40829, 1.3080884, -0.8164904)
+doppler_tracking = 1
+fov = 60.0
+near = 1.313
+far = 17.9
+script = ExtResource("4_irlpc")
