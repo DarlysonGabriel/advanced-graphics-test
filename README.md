@@ -15,10 +15,8 @@ explores advanced graphics techniques in Godot, including shaders, lighting, pos
 - Materials and rendering
 
 ## Development Screenshots
- 
-![img](/assets/github%20imagers/Screenshot1.jpg)
 
-![img](/assets/github%20imagers/Screenshot2.jpg) 
+(For now, nothing...)
 
 ## Technologies
 
