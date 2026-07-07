@@ -24,5 +24,4 @@ fog_height_density = 7.0175
 volumetric_fog_enabled = true
 adjustment_enabled = true
 adjustment_brightness = 1.49
-adjustment_contrast = 1.02
 adjustment_saturation = 1.46

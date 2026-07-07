@@ -2,16 +2,21 @@
 
 [ext_resource type="Environment" uid="uid://blrx7ncvamup2" path="res://src/config/world-environment/new_environment.tres" id="1_irlpc"]
 [ext_resource type="PackedScene" uid="uid://bwutyivabsivb" path="res://assets/3D-models/room/Room.tscn" id="1_l5bly"]
+[ext_resource type="CameraAttributesPractical" uid="uid://cd0eyjuujhp82" path="res://src/config/world-environment/camera_attributes_practical.tres" id="2_3bmuv"]
+[ext_resource type="Shader" uid="uid://dyfyyx8g07el6" path="res://src/config/water/water-texture.gdshader" id="3_scusb"]
 [ext_resource type="Script" uid="uid://c1bvql11uksqt" path="res://src/config/camera3D/camera_3d.gd" id="4_irlpc"]
-[ext_resource type="Shader" uid="uid://cd2hdm3ukms87" path="res://src/config/water/water.gdshader" id="5_scusb"]
+[ext_resource type="Shader" uid="uid://cd2hdm3ukms87" path="res://src/config/water/water-sistem.gdshader" id="5_scusb"]
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_scusb"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8xh8v"]
+render_priority = 0
+shader = ExtResource("3_scusb")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hbbnl"]
-render_priority = 0
+render_priority = 2
 shader = ExtResource("5_scusb")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_s1ctu"]
+lightmap_size_hint = Vector2i(10, 10)
 material = SubResource("ShaderMaterial_hbbnl")
 subdivide_width = 400
 subdivide_depth = 400
@@ -23,21 +28,26 @@ transform = Transform3D(-0.17472693, -0.16793928, -0.9701891, -0.42894554, -0.87
 light_energy = 1.6
 light_specular = 3.034
 shadow_enabled = true
+directional_shadow_split_2 = 1.0
+directional_shadow_split_3 = 1.0
 directional_shadow_blend_splits = true
 directional_shadow_max_distance = 393.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=878243910]
 environment = ExtResource("1_irlpc")
-camera_attributes = SubResource("CameraAttributesPractical_scusb")
+camera_attributes = ExtResource("2_3bmuv")
 
 [node name="Room" parent="." unique_id=1475551695 instance=ExtResource("1_l5bly")]
 
 [node name="Whater" type="MeshInstance3D" parent="." unique_id=1297748784]
 transform = Transform3D(5.210183, 0, 0, 0, 1, 0, 0, 0, 1.9386973, 0.6848638, -0.1510042, 1.1651971)
+material_override = SubResource("ShaderMaterial_8xh8v")
+cast_shadow = 2
+gi_mode = 2
 mesh = SubResource("PlaneMesh_s1ctu")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=133575015]
-transform = Transform3D(-0.12523405, 0, 0.99212724, 0, 1, 0, -0.99212724, 0, -0.12523405, 6.40829, 1.3080884, -0.8164904)
+transform = Transform3D(-0.1252341, 0, 0.99212724, 0, 1, 0, -0.99212724, 0, -0.1252341, 6.40829, 1.3080884, -0.8164906)
 doppler_tracking = 1
 fov = 60.0
 near = 1.313
