@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ctrl4bxw475yd"]
 
-[ext_resource type="Environment" uid="uid://blrx7ncvamup2" path="res://src/config/world-environment/new_environment.tres" id="1_irlpc"]
 [ext_resource type="PackedScene" uid="uid://bwutyivabsivb" path="res://assets/3D-models/room/Room.tscn" id="1_l5bly"]
-[ext_resource type="CameraAttributesPractical" uid="uid://cd0eyjuujhp82" path="res://src/config/world-environment/camera_attributes_practical.tres" id="2_3bmuv"]
+[ext_resource type="Environment" uid="uid://cmtqvtoy1kjif" path="res://src/config/world-environment/room-1/room-1-enviroment.tres" id="2_3bmuv"]
+[ext_resource type="CameraAttributesPractical" uid="uid://c2dbsxyj6nq38" path="res://src/config/world-environment/room-1/room-1-atribut.tres" id="2_y283j"]
 [ext_resource type="Shader" uid="uid://dyfyyx8g07el6" path="res://src/config/water/water-texture.gdshader" id="3_scusb"]
 [ext_resource type="Script" uid="uid://c1bvql11uksqt" path="res://src/config/camera3D/camera_3d.gd" id="4_irlpc"]
 [ext_resource type="Shader" uid="uid://cd2hdm3ukms87" path="res://src/config/water/water-sistem.gdshader" id="5_scusb"]
@@ -34,8 +34,8 @@ directional_shadow_blend_splits = true
 directional_shadow_max_distance = 393.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=878243910]
-environment = ExtResource("1_irlpc")
-camera_attributes = ExtResource("2_3bmuv")
+environment = ExtResource("2_3bmuv")
+camera_attributes = ExtResource("2_y283j")
 
 [node name="Room" parent="." unique_id=1475551695 instance=ExtResource("1_l5bly")]
 
