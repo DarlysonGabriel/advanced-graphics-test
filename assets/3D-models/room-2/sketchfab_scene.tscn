@@ -4,17 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://4m143dr573a0" path="res://assets/3D-models/room-2/brutalism_scene_baked_1.png" id="2_dcq0n"]
 [ext_resource type="Texture2D" uid="uid://dad8f462v2d1h" path="res://assets/3D-models/room-2/brutalism_scene_baked_0.png" id="3_o8yn6"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hy1rb"]
-albedo_texture = ExtResource("2_dcq0n")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m8eh7"]
-albedo_texture = ExtResource("3_o8yn6")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xuh52"]
-albedo_texture = ExtResource("2_dcq0n")
+albedo_texture = ExtResource("3_o8yn6")
+roughness_texture = ExtResource("2_dcq0n")
+normal_enabled = true
+normal_texture = ExtResource("2_dcq0n")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcq0n"]
 albedo_texture = ExtResource("3_o8yn6")
+roughness = 0.8
+roughness_texture = ExtResource("2_dcq0n")
+normal_enabled = true
+normal_scale = 0.6
+normal_texture = ExtResource("2_dcq0n")
+grow_amount = -10.074
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6x8ed"]
 resource_name = "Material.003"
@@ -65,26 +68,23 @@ _surfaces = [{
 }]
 shadow_mesh = SubResource("ArrayMesh_3cx3g")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c70j0"]
-albedo_texture = ExtResource("2_dcq0n")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_up3lw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8yn6"]
 albedo_texture = ExtResource("3_o8yn6")
+roughness_texture = ExtResource("2_dcq0n")
 
 [node name="Sketchfab_Scene" unique_id=165041991 instance=ExtResource("1_xuh52")]
 
 [node name="Object_4" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_0" parent_id_path=PackedInt32Array(1941284032) index="0" unique_id=542331463]
-material_override = SubResource("StandardMaterial3D_hy1rb")
-material_overlay = SubResource("StandardMaterial3D_m8eh7")
+material_override = SubResource("StandardMaterial3D_xuh52")
 
 [node name="Object_6" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_001_1" parent_id_path=PackedInt32Array(1646086416) index="0" unique_id=501294673]
-material_override = SubResource("StandardMaterial3D_xuh52")
-material_overlay = SubResource("StandardMaterial3D_dcq0n")
+material_override = SubResource("StandardMaterial3D_dcq0n")
+gi_mode = 2
 mesh = SubResource("ArrayMesh_tijhr")
 
 [node name="Plane_002_2" parent="Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1148612882) index="2" unique_id=754127717]
 visible = false
 
 [node name="Object_8" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_002_2" index="0" unique_id=1890022566]
-material_override = SubResource("StandardMaterial3D_c70j0")
-material_overlay = SubResource("StandardMaterial3D_up3lw")
+material_override = SubResource("StandardMaterial3D_o8yn6")
+gi_mode = 2

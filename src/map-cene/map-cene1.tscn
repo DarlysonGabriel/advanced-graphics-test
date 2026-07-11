@@ -4,8 +4,8 @@
 [ext_resource type="Environment" uid="uid://cmtqvtoy1kjif" path="res://src/config/world-environment/room-1/room-1-enviroment.tres" id="2_3bmuv"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c2dbsxyj6nq38" path="res://src/config/world-environment/room-1/room-1-atribut.tres" id="2_y283j"]
 [ext_resource type="Shader" uid="uid://dyfyyx8g07el6" path="res://src/config/water/water-texture.gdshader" id="3_scusb"]
-[ext_resource type="Script" uid="uid://c1bvql11uksqt" path="res://src/config/camera3D/camera_3d.gd" id="4_irlpc"]
 [ext_resource type="Shader" uid="uid://cd2hdm3ukms87" path="res://src/config/water/water-sistem.gdshader" id="5_scusb"]
+[ext_resource type="VoxelGIData" uid="uid://5et3lejqcfol" path="res://src/config/voxel gi/new_voxel_gi_data.tres" id="6_3bmuv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8xh8v"]
 render_priority = 0
@@ -52,4 +52,9 @@ doppler_tracking = 1
 fov = 60.0
 near = 1.313
 far = 17.9
-script = ExtResource("4_irlpc")
+
+[node name="VoxelGI" type="VoxelGI" parent="." unique_id=1756944052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.77041626, 2.6188965, -0.3302002)
+subdiv = 3
+size = Vector3(16.184021, 7.895996, 7.753174)
+data = ExtResource("6_3bmuv")
