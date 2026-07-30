@@ -16,7 +16,13 @@ explores advanced graphics techniques in Godot, including shaders, lighting, pos
 
 ## Development Screenshots
 
-(For now, nothing...)
+![IMG1](https://github.com/DarlysonGabriel/advanced-graphics-test/blob/main/assets/github%20imagers/Screenshot1.jpg)
+
+---
+
+![IMG2](https://github.com/DarlysonGabriel/advanced-graphics-test/blob/main/assets/github%20imagers/Screenshot2.jpg)
+
+
 
 ## Technologies
 
