@@ -1,51 +1,69 @@
 [gd_scene format=3 uid="uid://dxta417mqvtkp"]
 
 [ext_resource type="Texture2D" uid="uid://cu5exew51orrd" path="res://assets/3D-textures/textures/stone/stone-roughness.jpg" id="1_m51dm"]
-[ext_resource type="Texture2D" uid="uid://2lotjexnncf0" path="res://icon.svg" id="2_fqjwh"]
 [ext_resource type="Script" uid="uid://cuhfp76xsrbwp" path="res://src/ui/play.gd" id="3_fqjwh"]
 
 [sub_resource type="Animation" id="Animation_w3pxu"]
-resource_name = "Fade-In"
+resource_name = "IN"
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("TopLayer/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 1.9666667),
 "transitions": PackedFloat32Array(0.57434887, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterLayer/Play-butons:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(-194, 393), Vector2(0, 393)]
+}
 
 [sub_resource type="Animation" id="Animation_r1qqu"]
-resource_name = "Fade-Out"
+resource_name = "OUT"
 length = 2.0333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("TopLayer/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.46651652, 1),
+"times": PackedFloat32Array(0, 2.0333333),
+"transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_7rifs"]
-resource_name = "Move"
-length = 3.0
-loop_mode = 1
-
 [sub_resource type="Animation" id="Animation_511x6"]
-length = 0.76666665
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("TopLayer/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -54,81 +72,74 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterLayer/Play-butons:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 393)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gofeh"]
 _data = {
-&"Fade-In": SubResource("Animation_w3pxu"),
-&"Fade-Out": SubResource("Animation_r1qqu"),
-&"Move": SubResource("Animation_7rifs"),
+&"IN": SubResource("Animation_w3pxu"),
+&"OUT": SubResource("Animation_r1qqu"),
 &"RESET": SubResource("Animation_511x6")
 }
 
 [node name="Node2D" type="Node2D" unique_id=352818415]
 
-[node name="Backgrund" type="Sprite2D" parent="." unique_id=1730838937]
-position = Vector2(577.5, 320.125)
-scale = Vector2(0.774, 0.22770809)
+[node name="BackgrundLayer" type="CanvasLayer" parent="." unique_id=1127057600]
+
+[node name="Backgrund" type="Sprite2D" parent="BackgrundLayer" unique_id=1730838937]
+position = Vector2(694.99994, 363.62503)
+scale = Vector2(0.93066657, 0.25801113)
 texture = ExtResource("1_m51dm")
-metadata/_edit_lock_ = true
 
-[node name="Godot-ico" type="Sprite2D" parent="Backgrund" unique_id=693049418]
-position = Vector2(52.325565, -531.93097)
-scale = Vector2(1.1056201, 3.5286808)
-texture = ExtResource("2_fqjwh")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1149216518]
-libraries/ = SubResource("AnimationLibrary_gofeh")
-
-[node name="Title" type="Label" parent="." unique_id=346371149]
-offset_left = 1.0
-offset_top = -11.0
-offset_right = 1152.0
-offset_bottom = 256.0
+[node name="Title" type="Label" parent="BackgrundLayer" unique_id=346371149]
+anchors_preset = -1
+anchor_left = 0.00086805556
+anchor_top = -0.016975308
+anchor_right = 1.0
+anchor_bottom = 0.39506173
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 96
-text = "Advanced-Graphic-Test
-in:       "
+text = "Advanced-Graphic-Test"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="Version" type="Label" parent="." unique_id=400588264]
-offset_left = -9.0
-offset_top = 590.0
-offset_right = 107.0
-offset_bottom = 647.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 34
-text = "V0.03"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="CenterLayer" type="CanvasLayer" parent="." unique_id=1488417819]
 
-[node name="Options" type="Button" parent="." unique_id=14709240]
-offset_left = 995.0
-offset_top = 514.0
-offset_right = 1152.0
-offset_bottom = 576.0
-theme_override_font_sizes/font_size = 39
-text = "Options"
-
-[node name="Quit" type="Button" parent="." unique_id=1792883791]
-offset_left = 1035.0
-offset_top = 584.0
-offset_right = 1151.0
-offset_bottom = 646.0
-theme_override_font_sizes/font_size = 39
-text = "Quit"
-
-[node name="Play-butons" type="BoxContainer" parent="." unique_id=1592622921]
-offset_top = 399.0
-offset_right = 193.0
-offset_bottom = 594.0
+[node name="Play-butons" type="BoxContainer" parent="CenterLayer" unique_id=1592622921]
+anchors_preset = -1
+anchor_top = 0.6064815
+anchor_right = 0.16753472
+anchor_bottom = 0.9074074
 theme_override_constants/separation = 14
 alignment = 1
 vertical = true
+metadata/_edit_use_anchors_ = true
 
-[node name="Version2" type="Label" parent="Play-butons" unique_id=2000256064]
+[node name="Version2" type="Label" parent="CenterLayer/Play-butons" unique_id=2000256064]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
@@ -137,24 +148,70 @@ text = "Play a cene:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="cene1" type="Button" parent="Play-butons" unique_id=1003224325]
+[node name="cene1" type="Button" parent="CenterLayer/Play-butons" unique_id=1003224325]
 layout_mode = 2
 theme_override_font_sizes/font_size = 39
 text = "Cene 1"
 script = ExtResource("3_fqjwh")
 
-[node name="cene2" type="Button" parent="Play-butons" unique_id=1819859115]
+[node name="cene2" type="Button" parent="CenterLayer/Play-butons" unique_id=1819859115]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Cene 2"
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2143374064]
-visible = false
-offset_right = 1387.0
-offset_bottom = 799.0
+[node name="Version" type="Label" parent="CenterLayer" unique_id=400588264]
+anchors_preset = -1
+anchor_left = -0.0078125
+anchor_top = 0.91049385
+anchor_right = 0.2439236
+anchor_bottom = 0.9984568
+offset_right = -84.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 34
+text = "By darlyson V0.04"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Options" type="VBoxContainer" parent="CenterLayer" unique_id=1401114258]
+anchors_preset = -1
+anchor_left = 0.8637153
+anchor_top = 0.80246913
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+accessibility_region = true
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Options" type="Button" parent="CenterLayer/Options" unique_id=14709240]
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+text = "Options"
+
+[node name="Quit" type="Button" parent="CenterLayer/Options" unique_id=1792883791]
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+text = "Quit"
+
+[node name="TopLayer" type="CanvasLayer" parent="." unique_id=1944227557]
+
+[node name="ColorRect" type="ColorRect" parent="TopLayer" unique_id=2143374064]
+offset_left = -106.0
+offset_top = -66.0
+offset_right = 1281.0
+offset_bottom = 733.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
-metadata/_edit_lock_ = true
 
-[connection signal="pressed" from="Play-butons/cene1" to="Play-butons/cene1" method="_on_pressed"]
-[connection signal="pressed" from="Play-butons/cene2" to="Play-butons/cene1" method="_on_cene_2_pressed"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TopLayer" unique_id=1149216518]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_gofeh")
+
+[connection signal="pressed" from="CenterLayer/Play-butons/cene1" to="CenterLayer/Play-butons/cene1" method="_on_pressed"]
+[connection signal="pressed" from="CenterLayer/Play-butons/cene2" to="CenterLayer/Play-butons/cene1" method="_on_cene_2_pressed"]
