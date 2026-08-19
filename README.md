@@ -57,7 +57,7 @@ I recommend a mid-range computer for a more responsive and satisfactory performa
 
 | Hardware | Minimum |
 | ------| ---- |
-| RAM | 2GB | 
+| RAM | 3GB | 
 | CPU | Intel Celeron 847 |
 | Video card | Intel HD graphics |
 | Disk | HDD |
