@@ -1,66 +1,181 @@
-# Advanced Graphics Test
+# 🎨 Advanced Graphics Test
 
-Experimental project developed with Godot Engine for testing graphics, shaders, lighting, visual effects, and optimization techniques.
+«A collection of graphics, rendering and visual effect experiments created with Godot Engine.»
 
-## About This project
+This project is a personal laboratory for testing and studying different graphical techniques in Godot.
 
-explores advanced graphics techniques in Godot, including shaders, lighting, post-processing and rendering experiments.
-
-## Possible experiments include:
-
-- Lighting systems
-- Shaders (Note: I'm a beginner, so don't expect to see it in abundance.)
-- Post-processing effects
-- Visual effects (VFX)
-- Materials and rendering
-
-## Development Screenshots
-
-![IMG1](https://github.com/DarlysonGabriel/advanced-graphics-test/blob/main/assets/github%20imagers/Screenshot1.jpg)
+The main goal is to understand how different rendering techniques work and how they can be applied to real game projects.
 
 ---
 
-![IMG2](https://github.com/DarlysonGabriel/advanced-graphics-test/blob/main/assets/github%20imagers/Screenshot2.jpg)
+# ✨ Experiments
 
+The project contains experiments involving:
 
+- 🎨 Shaders
+- 💡 Lighting
+- 🌫️ Visual Effects
+- 🧱 Materials
+- 🖼️ Rendering
+- ✨ Post-Processing
+- 🎮 Godot Rendering Features
 
-## Technologies
+«The project is continuously evolving as new techniques are tested.»
+
+---
+
+# 🖥️ Screenshots
+
+Graphics
+
+Add screenshots and GIFs of the experiments here.
+
+<!--
+Example:
+
+![Lighting Experiment](screenshots/lighting.png)
+
+![Shader Experiment](screenshots/shader.gif)
+-->---
+
+# 🛠️ Technologies
+
+Technology| Purpose
+Godot Engine| Game engine and rendering
+GDScript| Gameplay and experiment logic
+GLSL / Godot Shaders| Custom graphical effects
+Git| Version control
+
+---
+
+# 📂 Project Structure
+```
+advanced-graphics-test/
+│
+├── assets/
+│   ├── materials/
+│   ├── shaders/
+│   ├── textures/
+│   └── ...
+│
+├── src/
+│   ├── scenes/
+│   ├── scripts/
+│   └── ...
+│
+├── project.godot
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+The structure may change as the project grows and new experiments are added.
+
+---
+
+# 🚀 Running the Project
+
+Requirements
 
 - Godot Engine
-- GDScript
+- Git
 
-I will add more in the future.
+Clone the repository
+```
+git clone https://github.com/DarlysonGabriel/advanced-graphics-test.git
+cd advanced-graphics-test
+```
+Open with Godot
 
-## Features
+Open the project using the Godot Project Manager and import the repository directory.
 
-- Dynamic lighting (in experimental tests)
-- Rendering tests
-- Godot Engine project
+Then run the project with:
 
-## Planned Features
+F6 → Run Current Scene
 
-- Advanced graphics experiments
-- Custom shaders
-- Advanced post-processing
-- Additional rendering experiments
+or:
 
-For detailed documentation, see developer_doc.md. 
- 
-## ⚠️ Disclaimer 
+F5 → Run Project
 
-This project is intended for experimentation and research purposes.
-Features may be incomplete, unstable, or subject to change at any time.
-On some machines, this game may not run satisfactorily.
-I recommend a mid-range computer for a more responsive and satisfactory performance.
+---
 
-## Minimum requiriments
+# 🎯 Project Goals
 
-| Hardware | Minimum |
-| ------| ---- |
-| RAM | 3GB | 
-| CPU | Intel Celeron 847 |
-| Video card | Intel HD graphics |
-| Disk | HDD |
-| O.S | Windows 10 or Linux (modern distribution) |or higher |
+The project is focused on experimentation and learning.
 
-*Copyright (c) 2026 Darlyson Gabriel*
+Current goals
+
+- [x] Create a graphics experimentation environment
+- [ ] Improve shader experiments
+- [ ] Add more lighting experiments
+- [ ] Add post-processing experiments
+- [ ] Improve visual documentation
+- [ ] Add screenshots and demonstrations
+- [ ] Document individual experiments
+
+---
+
+# 🧪 Why This Project Exists
+
+Graphics programming is an important part of game development.
+
+Instead of implementing every graphical technique directly inside a game project, this repository provides an isolated environment where techniques can be tested, compared and refined.
+
+This makes it easier to:
+
+- experiment without affecting a production project;
+- understand rendering techniques;
+- reuse successful experiments;
+- compare different approaches;
+- document what was learned.
+
+---
+
+# 📚 Documentation
+
+Each experiment should eventually have its own documentation describing:
+
+Technique
+    ↓
+How it works
+    ↓
+How it was implemented
+    ↓
+Important parameters
+    ↓
+Possible improvements
+
+Detailed documentation will be added as the project develops.
+
+---
+
+# 🗺️ Roadmap
+
+- [ ] Expand shader library
+- [ ] Add lighting experiments
+- [ ] Add particle experiments
+- [ ] Add post-processing effects
+- [ ] Improve project organization
+- [ ] Add visual demonstrations
+- [ ] Document experiments
+- [ ] Create example scenes
+
+---
+
+# 📜 License
+
+This project is licensed under the MIT License.
+
+See ""LICENSE"" (LICENSE) for more information.
+
+---
+
+# 👤 Author
+
+Darlyson Gabriel
+
+- GitHub: [@DarlysonGabriel](https://github.com/DarlysonGabriel)
+- Focus: Game Development • Godot • Graphics
+
+---
+
+«🎮 Experimenting with graphics to better understand how games work under the hood.»
